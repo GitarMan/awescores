@@ -42,11 +42,11 @@
 		}
 	};
 
-    // Close small menu when user clicks outside
+    // Close small menu when user clicks outside nav container
     document.addEventListener('click', function(event) {
-        var isClickInside = container.contains(event.target);
+        var isClickInsideNav = container.contains(event.target);
 
-        if (!isClickInside) {
+        if (!isClickInsideNav) {
             container.className = container.className.replace( ' toggled', '' );
             button.setAttribute( 'aria-expanded', 'false' );
             menu.setAttribute( 'aria-expanded', 'false' );
