@@ -1,0 +1,154 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+            text-decoration: underline;
+		}
+	}
+
+	a {
+        font-size: 1.5em;
+        font-family: $font__heading-family;
+        font-weight: $font__heading-weight;
+        font-style: $font__heading-style;
+        text-transform: uppercase;
+		display: block;
+        color: $color__menu-link;
+		text-decoration: none;
+        padding: 0.5em;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.menu-toggle {
+    @extend %fa-icon;
+    @extend .fas;
+    text-align: center;
+    color: $color__menu-toggle;
+    background-color: $color__menu-toggle-bg;
+    border: 2px solid;
+    border-radius: 0;
+    margin: 1em;
+    float: right;
+
+    &::before {
+        font-size: 2em;
+        content: fa-content($fa-var-bars);
+    }
+}
+
+.main-navigation.toggled ul {
+    width: 100%;
+
+    li {
+        width: 100%;
+        background-color: $color__menu-toggled-bg;
+
+        &:last-child {
+            margin-bottom: 1em;
+        }
+    }
+
+    a {
+        color: $color__menu-toggled-link;
+    }
+}
+
+@media screen and (min-width: $size__breakpoint-width) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+
+		li:hover > ul,
+		li.focus > ul {
+			left: -100%;
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    padding: 1em;
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

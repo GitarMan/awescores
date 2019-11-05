@@ -1,0 +1,32 @@
+.no-sidebar {
+	.content-area {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.site-main {
+		margin-right: 0;
+	}
+}
+
+@media all and (max-width: $size__breakpoint-width) {
+    .site-content {
+        .content-area {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .site-main {
+            margin-right: 0;
+        }
+        
+        .widget-area {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+}
