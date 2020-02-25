@@ -11,6 +11,7 @@ This is not meant to be a polished theme, or even a parent theme. It is meant to
 Additional Features in Awescores that are not included in underscores:
 
 * Added Widgetized Footer area
+* Added Header Widgets area
 * Basic header layout with flexbox
 * Include Font Awesome Free icons as a webfont 
 * Added JS to close small menu when user clicks outside of it

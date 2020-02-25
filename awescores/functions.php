@@ -117,7 +117,17 @@ function awescores_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Widgetized Footer', 'awescores' ),
 		'id'            => 'widgetized-footer',
-		'description'   => esc_html__( 'Add widgets here.', 'awescores' ),
+		'description'   => esc_html__( 'Footer Widgets area (rendered at the very bottom of the site). Add widgets here.', 'awescores' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Header Widgets', 'awescores' ),
+		'id'            => 'header-widgets',
+		'description'   => esc_html__( 'Header Widgets / Header Bar (rendered above the header). Add widgets here.', 'awescores' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
