@@ -42,7 +42,7 @@ Awescores includes support for Infinite Scroll in Jetpack.
 * Removed sidebar on single Pages and adjust layout conditionally
 * Minor style improvements (margins, padding, etc.)
 
-= 1.2 - May 12 2015 =
+= 1.2 - Feb 25 2020 =
 * Initial release
 * Added Header Widgets area
 
